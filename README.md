@@ -42,7 +42,7 @@ Run the project:
 python manage.py runserver
 ```
 
-| Plugin | README |
+| Description | URL |
 | ------ | ------ |
 | Dropbox | [plugins/dropbox/README.md][PlDb] |
 | GitHub | [plugins/github/README.md][PlGh] |
