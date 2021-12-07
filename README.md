@@ -61,6 +61,6 @@ python manage.py runserver
 | blog unfollow | /blog/<str:username>/follow/ |
 | post detail | /posts/<int:post_id>/ |
 | create post | /create/ |
-| edit posts | /posts/<int:post_id>/edit/] |
+| edit posts | /posts/<int:post_id>/edit/ |
 | viewed post | /posts/<int:post_id>/viewed/ |
 | unviewed post | /posts/<int:post_id>/unviewed/ |
