@@ -81,3 +81,13 @@ blog follow | /blog/<str:username>/follow/
 ```
 blog unfollow | /blog/<str:username>/unfollow/
 ```
+Посты можно отмечать прочитанными на странице поста
+```
+viewed post | /posts/<int:post_id>/viewed/
+```
+При добавлении поста автором, подписчики получат уведомление на почту.
+```
+viewed post | /posts/<int:post_id>/viewed/
+```
+Реализация почтовых сообщений происходит через Django модуль 'django.core.mail.backends.filebased.EmailBackend'.
+Письма хранятся в папке /sent_emails в директории blog_nekid.
