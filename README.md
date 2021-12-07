@@ -44,9 +44,13 @@ python manage.py runserver
 
 | Description | URL |
 | ------ | ------ |
-| Dropbox | [plugins/dropbox/README.md][PlDb] |
-| GitHub | [plugins/github/README.md][PlGh] |
-| Google Drive | [plugins/googledrive/README.md][PlGd] |
-| OneDrive | [plugins/onedrive/README.md][PlOd] |
-| Medium | [plugins/medium/README.md][PlMe] |
-| Google Analytics | [plugins/googleanalytics/README.md][PlGa] |
+| index | / |
+| follow index | /follow/ |
+| blog username | /blog/<str:username>/ |
+| blog follow | /blog/<str:username>/follow/ |
+| blog unfollow | /blog/<str:username>/follow/ |
+| post detail | /posts/<int:post_id>/ |
+| create post | /create/ |
+| edit posts | /posts/<int:post_id>/edit/] |
+| viewed post | /posts/<int:post_id>/viewed/ |
+| unviewed post | /posts/<int:post_id>/unviewed/ |
