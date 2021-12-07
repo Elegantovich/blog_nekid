@@ -68,37 +68,50 @@ python manage.py runserver
 | unviewed post | /posts/<int:post_id>/unviewed/ |
 
 Сайт представлен в виде бетта версии блога, в которым отсутствует возможность регистрации. Заходить следует с аккаунта суперадмина 
+
 ```
 /admin/ login "admin2"  password "qwerty123"
 ```
+
 <p align="center"><img src="https://github.com/Elegantovich/blog_nekid/blob/Elegantovich/blog_nekid/static/img/nekid2.JPG"></p>
 В проекте присутствует еще несколько пользователей. На данный аккаунт подписаны User2 и User3, а сам пользователь подписан на все что можно. Посты избранных блогеров отображаются во вкладке "Избранное"
+
 ```
 /follow/
 ```
+
 <p align="center"><img src="https://github.com/Elegantovich/blog_nekid/blob/Elegantovich/blog_nekid/static/img/nekid3.JPG"></p>
 Подписаться или отписаться на автора можно на странице блога
+
 ```
 /blog/<str:username>/follow/
 ```
+
 ```
 /blog/<str:username>/unfollow/
 ```
+
 <p align="center"><img src="https://github.com/Elegantovich/blog_nekid/blob/Elegantovich/blog_nekid/static/img/nekid4.JPG"></p>
 Посты можно отмечать прочитанными на странице поста
+
 ```
 /posts/<int:post_id>/viewed/
 ```
+
 <p align="center"><img src="https://github.com/Elegantovich/blog_nekid/blob/Elegantovich/blog_nekid/static/img/nekid5.JPG"></p>
 При добавлении поста автором, подписчики получат уведомление на почту.
+
 ```
 /create/
 ```
+
 <p align="center"><img src="https://github.com/Elegantovich/blog_nekid/blob/Elegantovich/blog_nekid/static/img/nekid6.JPG"></p>
 Данный пост можно в дальнейшем редактировать
+
 ```
 /posts/<int:post_id>/edit/
 ```
+
 <p align="center"><img src="https://github.com/Elegantovich/blog_nekid/blob/Elegantovich/blog_nekid/static/img/nekid7.JPG"></p>
 Реализация почтовых сообщений происходит через Django модуль 'django.core.mail.backends.filebased.EmailBackend'.
 Письма хранятся в папке /sent_emails в директории blog_nekid.
