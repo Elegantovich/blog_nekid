@@ -55,7 +55,7 @@ python manage.py runserver
 
 | Description | URL |
 | ------ | ------ |
-| /admin/ | admin zone /
+| /admin/ | / admin zone /
 | index | / |
 | follow index | /follow/ |
 | blog username | /blog/<str:username>/ |
@@ -73,22 +73,22 @@ login "admin2"  password "qwerty123"
 ```
 В проекте присуствует еще несколько пользователей. На данный аккаунт подписаны User2 и User3, а сам пользователь подписан на все что можно. Посты избранных блогеров отображаются во вкладке "Избранное"
 ```
-follow index | /follow/
+/follow/
 ```
 Подписаться или отписаться на автора можно на странице блога
 ```
-blog follow | /blog/<str:username>/follow/
+/blog/<str:username>/follow/
 ```
 ```
-blog unfollow | /blog/<str:username>/unfollow/
+/blog/<str:username>/unfollow/
 ```
 Посты можно отмечать прочитанными на странице поста
 ```
-viewed post | /posts/<int:post_id>/viewed/
+/posts/<int:post_id>/viewed/
 ```
 При добавлении поста автором, подписчики получат уведомление на почту.
 ```
-viewed post | /posts/<int:post_id>/viewed/
+/posts/<int:post_id>/viewed/
 ```
 Реализация почтовых сообщений происходит через Django модуль 'django.core.mail.backends.filebased.EmailBackend'.
 Письма хранятся в папке /sent_emails в директории blog_nekid.
