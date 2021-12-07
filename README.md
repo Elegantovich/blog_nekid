@@ -1,4 +1,4 @@
-
+<p align="center"><img src="https://github.com/Elegantovich/blog_nekid/blob/Elegantovich/blog_nekid/static/img/nekid.JPG"></p>
 # blog_nekid
 
 ### Description
