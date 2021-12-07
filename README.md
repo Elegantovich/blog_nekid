@@ -1,15 +1,13 @@
-[![CI](https://github.com/deadbit-dev/api_yamdb/actions/workflows/python-app.yml/badge.svg?branch=master)](https://github.com/deadbit-dev/api_yamdb/actions/workflows/python-app.yml)
-
 ### How to start a project:
 
 Clone and move to another repository:
 
 ```
-git clone https://github.com/deadbit-dev/api_yamdb.git
+git clone https://github.com/Elegantovich/blog_nekid/
 ```
 
 ```
-cd api_yamdb
+cd blog_nekid
 ```
 
 Create and activate a virtual environment:
@@ -25,7 +23,7 @@ source env/bin/activate
 Install dependencies from file requirements.txt:
 
 ```
-python3 -m pip install --upgrade pip
+python -m pip install --upgrade pip
 ```
 
 ```
@@ -35,13 +33,13 @@ pip install -r requirements.txt
 Run migrations:
 
 ```
-python3 manage.py migrate
+python manage.py migrate 
 ```
 
 Run the project:
 
 ```
-python3 manage.py runserver
+python manage.py runserver
 ```
 
 | Plugin | README |
