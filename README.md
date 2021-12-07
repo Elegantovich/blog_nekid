@@ -42,6 +42,7 @@ Run the project:
 python manage.py runserver
 ```
 
+
 | Description | URL |
 | ------ | ------ |
 | index | / |
