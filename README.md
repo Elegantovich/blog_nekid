@@ -113,11 +113,13 @@ python manage.py runserver
 ```
 
 <p align="center"><img src="https://github.com/Elegantovich/blog_nekid/blob/Elegantovich/blog_nekid/static/img/nekid7.JPG"></p>
-Реализация почтовых сообщений происходит через Django модуль 'django.core.mail.backends.filebased.EmailBackend'.
-Письма хранятся в папке /sent_emails в директории blog_nekid.
 
 ```
-<p align="center"><img src="https://github.com/Elegantovich/blog_nekid/blob/Elegantovich/blog_nekid/static/img/nekid8.JPG"></p>
+Реализация почтовых сообщений происходит через Django модуль 'django.core.mail.backends.filebased.EmailBackend'.
+Письма хранятся в папке /sent_emails в директории blog_nekid.
 ```
+
+<p align="center"><img src="https://github.com/Elegantovich/blog_nekid/blob/Elegantovich/blog_nekid/static/img/nekid8.JPG"></p>
+
 
 
