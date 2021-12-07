@@ -1,3 +1,12 @@
+
+# blog_nekid
+
+### Description
+Start version of site-blog.
+
+### Tech
+Python 3.9, Django 3.2
+
 ### How to start a project:
 
 Clone and move to another repository:
