@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% block title %}  {{page_obj.title}}{% endblock %}
+{% block content %}
+    <main>
+    <div class="mb-5">
+      <article>
+        <ul>
+          <li class="nav-item";>
+            <h3 align="center">{{ blogs.tittle }}</h3>
+              </li>
+          <li class="nav-item";>
+          <b>Автор:</b> {{ blog.get_full_name }}
+          </li>
+          <li class="nav-item";>
+          <b>О блоге:</b> {{ blog.about_blog }}
+            </li>
+            <li class="nav-item";>
+              <b>Кол-во постов:</b> {{ all_posts.count}}
+                </li>
+                {% if following %}
+                <a
+                  class="btn btn-lg btn-dark"
+                  href="{% url 'posts:blog_unfollow' blog.username %}" role="button"
+                >
+                  Отписаться
+                </a>
+              {% else %}
+                  <a
+                    class="btn btn-lg btn-dark"
+                    href="{% url 'posts:blog_follow' blog.username %}" role="button"
+                  >
+                    Подписаться
+                  </a>
+               {% endif %}
+        </ul>
+      </article>
+</div>
+{% if not forloop.last %}<hr>{% endif %}
+      <div class="container py-5"> 
+        <article>
+          {% for post in page_obj %}
+            <article>
+              <ul>
+                <li class="nav-item";>
+                  <b>Дата публикации:</b> {{ post.pub_date|date:"d E Y" }}
+                </li>
+                <li class="nav-item";>
+                  <b>Тема:</b> {{ post.title }}
+                </li>
+                <br>
+                <li class="nav-item";>
+                  <div align="justify"><i>{{ post.text|wordwrap:200|linebreaks }}</i></div>
+                </li>
+                <li>
+                  <a button type="button" class="btn btn-dark" href="{% url 'posts:post_detail' post.id %}">подробная информация </a>
+                 </li>
+              </ul>
+            </article>
+        </article>
+          {% if not forloop.last %}<hr>{% endif %}
+          {% endfor %}
+        </article>       
+        <hr>
+
+          {% include 'posts/includes/paginator.html' %}
+      </div>
+    </main>
+{% endblock %}

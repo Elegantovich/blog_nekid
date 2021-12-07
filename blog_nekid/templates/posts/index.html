@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %}Последние обновления на сайте{% endblock %}
+{% block content %}
+{% load cache %}
+    <h1 align="center" >Последние обновления на сайте</h1><br>
+    {% include 'posts/includes/switcher.html' %}
+    {% cache 20 sidebar %}
+  {% for blog in page_obj %}
+      <article>
+        <ul>
+          <li class="nav-item";>
+            <h3 align="center">{{ blog.tittle }}</h3>
+              </li>
+              <br>
+          <li class="nav-item";>
+          <b>Автор:</b> {{ blog.get_full_name }}
+          </li>
+          <li class="nav-item";>
+          <b>О блоге:</b> {{ blog.about_blog }}
+            </li>
+          <li class="nav-item";>
+          <b>Дата последней публикации публикации:</b> {{ post.pub_date|date:"d E Y" }}
+          </li>
+          <a align="left" button type="button" class="btn btn-dark" href="{% url 'posts:blog' blog.username %}">Почитать</a>
+          </li>
+        </ul>
+      </article>
+    {% if not forloop.last %}<hr>{% endif %}
+    {% endfor %}
+   {% endcache %}
+  {% include 'posts/includes/paginator.html' %}
+{% endblock %}
