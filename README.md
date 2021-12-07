@@ -77,5 +77,7 @@ follow index | /follow/
 Подписаться или отписаться на автора можно на странице блога
 ```
 blog follow | /blog/<str:username>/follow/
+```
+```
 blog unfollow | /blog/<str:username>/unfollow/
 ```
